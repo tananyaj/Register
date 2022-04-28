@@ -31,7 +31,7 @@ public class RegisterService {
         this.registerRepositoryCustom = registerRepositoryCustom;
     }
 
-    public void addUser(AddUserRequest request, String username) throws ClientException,ParseException {
+    public void addUser(AddUserRequest request, String username) throws ClientException {
         if (request.getSalary() < 15000) {
             throw new ClientException("401-KS-0000001", "เงินเดือนน้อยเกินไป", "เงินเดือนน้อยเกินไป");
         }
